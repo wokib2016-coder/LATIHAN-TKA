@@ -250,7 +250,7 @@
     </nav>
 
     <!-- ============================================================
-    SOAL 1
+    SOAL 1 - LENGKAP
     ============================================================ -->
     <div class="card" id="soal-1">
         <div class="card-header-actions">
@@ -260,7 +260,6 @@
                 <button class="reset-img-btn" onclick="resetQuestion(1)">↺ Reset</button>
             </div>
         </div>
-        
         <div class="image-preview-container" id="previewContainer-1">
             <img id="questionImage-1" src="./soal_1.jpeg" alt="Gambar Soal 1" onerror="this.style.display='none'; document.getElementById('noImage-1').style.display='block';">
             <div id="noImage-1" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
@@ -270,7 +269,6 @@
             <br>
             <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_1.jpeg</strong> ke repository</span>
         </div>
-
         <div class="options-container" id="options-1">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,1)">8,80 mm</button>
             <button class="option-btn" data-correct="true" onclick="handleOptionClick(this,1)">9,30 mm</button>
@@ -289,11 +287,8 @@
     </div>
 
     <!-- ============================================================
-    SOAL 2 - 10 (sama seperti sebelumnya, hanya ganti src="./soal_2.jpeg" dst)
-    KARENA KARAKTER TERBATAS, SAYA SINGKAT - TAPI POLA SAMA
+    SOAL 2 - LENGKAP
     ============================================================ -->
-
-    <!-- ===== SOAL 2 ===== -->
     <div class="card" id="soal-2">
         <div class="card-header-actions">
             <span class="card-number">🧭 Soal 2 <span class="badge">Vektor</span></span>
@@ -327,7 +322,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 3 ===== -->
+    <!-- ============================================================
+    SOAL 3 - LENGKAP
+    ============================================================ -->
     <div class="card" id="soal-3">
         <div class="card-header-actions">
             <span class="card-number">📊 Soal 3 <span class="badge">Grafik GLBB</span></span>
@@ -363,7 +360,7 @@
     </div>
 
     <!-- ============================================================
-    SOAL 4
+    SOAL 4 - LENGKAP
     ============================================================ -->
     <div class="card" id="soal-4">
         <div class="card-header-actions">
@@ -398,7 +395,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 5 ===== -->
+    <!-- ============================================================
+    SOAL 5 - LENGKAP DENGAN ANIMASI ROKET
+    ============================================================ -->
     <div class="card" id="soal-5">
         <div class="card-header-actions">
             <span class="card-number">🚀 Soal 5 <span class="badge">GLBB Vertikal</span></span>
@@ -448,7 +447,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 6 ===== -->
+    <!-- ============================================================
+    SOAL 6 - LENGKAP DENGAN ANIMASI GMB
+    ============================================================ -->
     <div class="card" id="soal-6">
         <div class="card-header-actions">
             <span class="card-number">🔄 Soal 6 <span class="badge">GMB</span></span>
@@ -506,9 +507,8 @@
     </div>
 
     <!-- ============================================================
-    SOAL 7, 8, 9, 10 - POLA SAMA, GUNAKAN src="./soal_7.jpeg" dst
+    SOAL 7 - LENGKAP DENGAN ANIMASI BASKET
     ============================================================ -->
-    <!-- SOAL 7 -->
     <div class="card" id="soal-7">
         <div class="card-header-actions">
             <span class="card-number">🏀 Soal 7 <span class="badge">Gerak Parabola</span></span>
@@ -573,7 +573,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 8 ===== -->
+    <!-- ============================================================
+    SOAL 8 - LENGKAP DENGAN ANIMASI INERSIA
+    ============================================================ -->
     <div class="card" id="soal-8">
         <div class="card-header-actions">
             <span class="card-number">🚗 Soal 8 <span class="badge">Hukum I Newton</span></span>
@@ -684,7 +686,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 9 ===== -->
+    <!-- ============================================================
+    SOAL 9 - LENGKAP DENGAN ANIMASI PERAHU
+    ============================================================ -->
     <div class="card" id="soal-9">
         <div class="card-header-actions">
             <span class="card-number">🚤 Soal 9 <span class="badge">Vektor + Hukum Newton</span></span>
@@ -761,7 +765,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 10 ===== -->
+    <!-- ============================================================
+    SOAL 10 - LENGKAP DENGAN ANIMASI KARATE
+    ============================================================ -->
     <div class="card" id="soal-10">
         <div class="card-header-actions">
             <span class="card-number">🥋 Soal 10 <span class="badge">Impuls-Momentum</span></span>
@@ -846,7 +852,7 @@
 
     <script>
         // ============================================================
-        // JAVASCRIPT (Semua fungsi sama seperti sebelumnya)
+        // SEMUA JAVASCRIPT LENGKAP
         // ============================================================
         let questionScores = {1:0,2:0,3:0,4:0,5:0,6:0,7:0,8:0,9:0,10:0};
         let questionLocked = {1:false,2:false,3:false,4:false,5:false,6:false,7:false,8:false,9:false,10:false};
@@ -1663,7 +1669,6 @@
             document.querySelectorAll('.card').forEach(card => observer.observe(card));
         });
     </script>
-
 </body>
 </html>
 ```
