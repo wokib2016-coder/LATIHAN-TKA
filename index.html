@@ -6,7 +6,7 @@
     <title>🏆 TKA Fisika Interaktif - 10 Soal & Simulasi</title>
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
     <style>
-        /* ===== CSS LENGKAP ===== */
+        /* ===== CSS ===== */
         *{box-sizing:border-box;margin:0;padding:0}
         :root{--primary:#1e3c72;--primary-light:#2a5298;--accent:#ff9800;--success:#27ae60;--danger:#e74c3c;--text:#333;--bg:#f4f7f6;--card-bg:#fff;--shadow:0 4px 10px rgba(0,0,0,0.1);--radius:12px}
         [data-theme=dark]{--primary:#0d1b2a;--primary-light:#1b3a5c;--text:#e8e8e8;--bg:#1a1a2e;--card-bg:#2d2d44}
@@ -36,7 +36,7 @@
         .reset-img-btn{background:var(--danger);color:#fff;border:none;padding:6px 16px;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:600;transition:.3s}
         .reset-img-btn:hover{transform:scale(1.05);opacity:.9}
         .image-preview-container{text-align:center;margin-bottom:15px}
-        .image-preview-container img{max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:var(--shadow)}
+        .image-preview-container img{max-width:100%;max-height:350px;border-radius:6px;border:1px solid #ddd;box-shadow:var(--shadow)}
         .image-preview-container .no-image{background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999}
         .options-container{display:flex;flex-direction:column;gap:8px;margin-top:12px}
         .option-btn{background:var(--card-bg);border:2px solid #e0e0e0;padding:12px 16px;border-radius:8px;cursor:pointer;text-align:left;font-size:.95rem;transition:.3s;width:100%;color:var(--text);font-weight:500}
@@ -251,7 +251,7 @@
     </nav>
 
     <!-- ============================================================
-    SOAL 1 - TAMPILAN GAMBAR LANGSUNG
+    SOAL 1 - DENGAN NAMA FILE soal_1.jpeg
     ============================================================ -->
     <div class="card" id="soal-1">
         <div class="card-header-actions">
@@ -262,15 +262,14 @@
             </div>
         </div>
         
-        <!-- TAMPILAN GAMBAR - Ganti src="soal1.jpg" dengan nama file gambar Anda -->
         <div class="image-preview-container" id="previewContainer-1">
-            <img id="questionImage-1" src="soal1.jpg" alt="Gambar Soal 1" onerror="this.style.display='none'; document.getElementById('noImage-1').style.display='block';">
+            <img id="questionImage-1" src="soal_1.jpeg" alt="Gambar Soal 1" onerror="this.style.display='none'; document.getElementById('noImage-1').style.display='block';">
             <div id="noImage-1" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal1.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_1.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal1.jpg</strong> ke repository</span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_1.jpeg</strong> ke repository</span>
         </div>
 
         <div class="options-container" id="options-1">
@@ -290,9 +289,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 2
-    ============================================================ -->
+    <!-- ===== SOAL 2 ===== -->
     <div class="card" id="soal-2">
         <div class="card-header-actions">
             <span class="card-number">🧭 Soal 2 <span class="badge">Vektor</span></span>
@@ -302,13 +299,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-2">
-            <img id="questionImage-2" src="soal2.jpg" alt="Gambar Soal 2" onerror="this.style.display='none'; document.getElementById('noImage-2').style.display='block';">
+            <img id="questionImage-2" src="soal_2.jpeg" alt="Gambar Soal 2" onerror="this.style.display='none'; document.getElementById('noImage-2').style.display='block';">
             <div id="noImage-2" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal2.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_2.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal2.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_2.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-2">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,2)">Bergerak ke arah timur dengan kecepatan 12 km/jam</button>
@@ -326,9 +323,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 3
-    ============================================================ -->
+    <!-- ===== SOAL 3 ===== -->
     <div class="card" id="soal-3">
         <div class="card-header-actions">
             <span class="card-number">📊 Soal 3 <span class="badge">Grafik GLBB</span></span>
@@ -338,13 +333,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-3">
-            <img id="questionImage-3" src="soal3.jpg" alt="Gambar Soal 3" onerror="this.style.display='none'; document.getElementById('noImage-3').style.display='block';">
+            <img id="questionImage-3" src="soal_3.jpeg" alt="Gambar Soal 3" onerror="this.style.display='none'; document.getElementById('noImage-3').style.display='block';">
             <div id="noImage-3" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal3.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_3.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal3.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_3.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-3">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,3)">Kecepatan mobil A dan kecepatan mobil B selalu konstan.</button>
@@ -363,9 +358,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 4
-    ============================================================ -->
+    <!-- ===== SOAL 4 ===== -->
     <div class="card" id="soal-4">
         <div class="card-header-actions">
             <span class="card-number">📈 Soal 4 <span class="badge">Grafik V-t</span></span>
@@ -375,13 +368,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-4">
-            <img id="questionImage-4" src="soal4.jpg" alt="Gambar Soal 4" onerror="this.style.display='none'; document.getElementById('noImage-4').style.display='block';">
+            <img id="questionImage-4" src="soal_4.jpeg" alt="Gambar Soal 4" onerror="this.style.display='none'; document.getElementById('noImage-4').style.display='block';">
             <div id="noImage-4" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal4.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_4.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal4.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_4.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-4">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,4)">150 m</button>
@@ -399,9 +392,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 5
-    ============================================================ -->
+    <!-- ===== SOAL 5 ===== -->
     <div class="card" id="soal-5">
         <div class="card-header-actions">
             <span class="card-number">🚀 Soal 5 <span class="badge">GLBB Vertikal</span></span>
@@ -411,13 +402,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-5">
-            <img id="questionImage-5" src="soal5.jpg" alt="Gambar Soal 5" onerror="this.style.display='none'; document.getElementById('noImage-5').style.display='block';">
+            <img id="questionImage-5" src="soal_5.jpeg" alt="Gambar Soal 5" onerror="this.style.display='none'; document.getElementById('noImage-5').style.display='block';">
             <div id="noImage-5" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal5.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_5.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal5.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_5.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-5">
             <button class="option-btn" data-correct="true" onclick="handleOptionClick(this,5)">30 m</button>
@@ -451,9 +442,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 6
-    ============================================================ -->
+    <!-- ===== SOAL 6 ===== -->
     <div class="card" id="soal-6">
         <div class="card-header-actions">
             <span class="card-number">🔄 Soal 6 <span class="badge">GMB</span></span>
@@ -463,13 +452,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-6">
-            <img id="questionImage-6" src="soal6.jpg" alt="Gambar Soal 6" onerror="this.style.display='none'; document.getElementById('noImage-6').style.display='block';">
+            <img id="questionImage-6" src="soal_6.jpeg" alt="Gambar Soal 6" onerror="this.style.display='none'; document.getElementById('noImage-6').style.display='block';">
             <div id="noImage-6" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal6.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_6.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal6.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_6.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-6">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,6)">Kecepatan linear benda A menjadi dua kali kecepatan linear benda B.</button>
@@ -510,9 +499,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 7
-    ============================================================ -->
+    <!-- ===== SOAL 7 ===== -->
     <div class="card" id="soal-7">
         <div class="card-header-actions">
             <span class="card-number">🏀 Soal 7 <span class="badge">Gerak Parabola</span></span>
@@ -522,13 +509,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-7">
-            <img id="questionImage-7" src="soal7.jpg" alt="Gambar Soal 7" onerror="this.style.display='none'; document.getElementById('noImage-7').style.display='block';">
+            <img id="questionImage-7" src="soal_7.jpeg" alt="Gambar Soal 7" onerror="this.style.display='none'; document.getElementById('noImage-7').style.display='block';">
             <div id="noImage-7" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal7.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_7.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal7.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_7.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-7">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,7)">Kedua bola tetap masuk ke ring karena sudut dan tinggi awalnya tidak berubah.</button>
@@ -577,9 +564,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 8
-    ============================================================ -->
+    <!-- ===== SOAL 8 ===== -->
     <div class="card" id="soal-8">
         <div class="card-header-actions">
             <span class="card-number">🚗 Soal 8 <span class="badge">Hukum I Newton</span></span>
@@ -589,13 +574,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-8">
-            <img id="questionImage-8" src="soal8.jpg" alt="Gambar Soal 8" onerror="this.style.display='none'; document.getElementById('noImage-8').style.display='block';">
+            <img id="questionImage-8" src="soal_8.jpeg" alt="Gambar Soal 8" onerror="this.style.display='none'; document.getElementById('noImage-8').style.display='block';">
             <div id="noImage-8" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal8.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_8.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal8.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_8.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-8">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,8)">Semakin besar gaya yang diberikan pada suatu benda, semakin besar percepatannya.</button>
@@ -690,9 +675,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 9
-    ============================================================ -->
+    <!-- ===== SOAL 9 ===== -->
     <div class="card" id="soal-9">
         <div class="card-header-actions">
             <span class="card-number">🚤 Soal 9 <span class="badge">Vektor + Hukum Newton</span></span>
@@ -702,13 +685,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-9">
-            <img id="questionImage-9" src="soal9.jpg" alt="Gambar Soal 9" onerror="this.style.display='none'; document.getElementById('noImage-9').style.display='block';">
+            <img id="questionImage-9" src="soal_9.jpeg" alt="Gambar Soal 9" onerror="this.style.display='none'; document.getElementById('noImage-9').style.display='block';">
             <div id="noImage-9" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal9.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_9.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal9.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_9.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-9">
             <button class="option-btn" data-correct="true" onclick="handleOptionClick(this,9)">kecepatan resultannya 10 m.s⁻¹ dengan arah 53° ke timur dari utara, kemudian bergerak lurus dengan kecepatan konstan</button>
@@ -769,9 +752,7 @@
         </div>
     </div>
 
-    <!-- ============================================================
-    SOAL 10
-    ============================================================ -->
+    <!-- ===== SOAL 10 ===== -->
     <div class="card" id="soal-10">
         <div class="card-header-actions">
             <span class="card-number">🥋 Soal 10 <span class="badge">Impuls-Momentum</span></span>
@@ -781,13 +762,13 @@
             </div>
         </div>
         <div class="image-preview-container" id="previewContainer-10">
-            <img id="questionImage-10" src="soal10.jpg" alt="Gambar Soal 10" onerror="this.style.display='none'; document.getElementById('noImage-10').style.display='block';">
+            <img id="questionImage-10" src="soal_10.jpeg" alt="Gambar Soal 10" onerror="this.style.display='none'; document.getElementById('noImage-10').style.display='block';">
             <div id="noImage-10" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
                 ⚠️ Gambar tidak ditemukan.<br>
-                <span style="font-size:0.8rem;">Pastikan file <strong>soal10.jpg</strong> sudah di-upload ke repository.</span>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal_10.jpeg</strong> sudah di-upload ke repository.</span>
             </div>
             <br>
-            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal10.jpg</strong></span>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal_10.jpeg</strong></span>
         </div>
         <div class="options-container" id="options-10">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,10)">Impuls yang kecil menyebabkan tumpukan batu bata pecah karena kecepatan pukulan sangat tinggi.</button>
@@ -855,7 +836,9 @@
     </div>
 
     <script>
-        // ===== SEMUA JAVASCRIPT =====
+        // ============================================================
+        // JAVASCRIPT - SEMUA LOGIC (Sama seperti sebelumnya)
+        // ============================================================
         let questionScores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
         let questionLocked = { 1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false, 9: false, 10: false };
 
@@ -970,7 +953,9 @@
             document.getElementById('timer').textContent = m + ':' + s;
         }, 1000);
 
-        // ===== ROKET (SOAL 5) =====
+        // ============================================================
+        // ANIMASI ROKET (SOAL 5)
+        // ============================================================
         const SCALE_FACTOR = 1.4;
         let rocketInterval = null;
 
@@ -995,8 +980,7 @@
             if (t >= 3.0) t = 0;
             rocketInterval = setInterval(() => {
                 t += 0.05;
-                if (t > 3.0) { t = 3.0;
-                    clearInterval(rocketInterval); }
+                if (t > 3.0) { t = 3.0; clearInterval(rocketInterval); }
                 slider.value = t;
                 updateRocketBySlider(t);
             }, 50);
@@ -1009,9 +993,10 @@
             updateRocketBySlider(0);
         }
 
-        // ===== GMB (SOAL 6) =====
-        let thetaA = 0,
-            thetaB = 0;
+        // ============================================================
+        // ANIMASI GMB (SOAL 6)
+        // ============================================================
+        let thetaA = 0, thetaB = 0;
         const OMEGA_B_FIXED = 3.0;
         let gmbInterval = null;
 
@@ -1019,11 +1004,8 @@
             const omegaA = parseFloat(omegaAVal);
             document.getElementById('gmbSliderText').innerText = omegaA.toFixed(1) + ' rad/s';
             const scene = document.getElementById('gmbScene');
-            const sw = scene.clientWidth || 400,
-                sh = scene.clientHeight || 300;
-            const cxA = sw * 0.32,
-                cyA = sh * 0.5,
-                rA = 85;
+            const sw = scene.clientWidth || 400, sh = scene.clientHeight || 300;
+            const cxA = sw * 0.32, cyA = sh * 0.5, rA = 85;
             const xA = cxA + rA * Math.cos(thetaA);
             const yA = cyA + rA * Math.sin(thetaA);
             const objA = document.getElementById('objA');
@@ -1036,9 +1018,7 @@
             const angleA = Math.atan2(cyA - yA, cxA - xA);
             vecA.style.width = lenA + 'px';
             vecA.style.transform = 'rotate(' + angleA + 'rad)';
-            const cxB = sw * 0.75,
-                cyB = sh * 0.5,
-                rB = 45;
+            const cxB = sw * 0.75, cyB = sh * 0.5, rB = 45;
             const xB = cxB + rB * Math.cos(thetaB);
             const yB = cyB + rB * Math.sin(thetaB);
             const objB = document.getElementById('objB');
@@ -1053,8 +1033,7 @@
             vecB.style.transform = 'rotate(' + angleB + 'rad)';
             const asA = Math.pow(omegaA, 2) * 4;
             const asB = Math.pow(OMEGA_B_FIXED, 2) * 2;
-            document.getElementById('gmbInfoBox').innerHTML =
-                `ωA: ${omegaA.toFixed(1)} rad/s | ωB: ${OMEGA_B_FIXED.toFixed(1)} rad/s (tetap)<br>asA: ${asA.toFixed(1)} m/s² | asB: ${asB.toFixed(1)} m/s²`;
+            document.getElementById('gmbInfoBox').innerHTML = `ωA: ${omegaA.toFixed(1)} rad/s | ωB: ${OMEGA_B_FIXED.toFixed(1)} rad/s (tetap)<br>asA: ${asA.toFixed(1)} m/s² | asB: ${asB.toFixed(1)} m/s²`;
         }
 
         function startGMBSimulation() {
@@ -1077,14 +1056,11 @@
             updateGMBScene(6.0);
         }
 
-        // ===== BASKET (SOAL 7) =====
-        const V0_ADRIAN = 7.5,
-            ANGLE_DEG = 50,
-            ANGLE_RAD = ANGLE_DEG * Math.PI / 180,
-            G_BASKET = 9.8,
-            SCALE_PX = 55;
-        const START_X = 20,
-            START_Y = 30 + 2 * SCALE_PX;
+        // ============================================================
+        // ANIMASI BASKET (SOAL 7)
+        // ============================================================
+        const V0_ADRIAN = 7.5, ANGLE_DEG = 50, ANGLE_RAD = ANGLE_DEG * Math.PI / 180, G_BASKET = 9.8, SCALE_PX = 55;
+        const START_X = 20, START_Y = 30 + 2 * SCALE_PX;
         let basketInterval = null;
 
         function updateBasketSimulation(v0BVal) {
@@ -1120,11 +1096,7 @@
                 b.style.height = '22px';
                 b.style.fontSize = '9px';
             });
-            let t = 0,
-                adrianSuccess = false,
-                bismaSuccess = false,
-                adrianChecked = false,
-                bismaChecked = false;
+            let t = 0, adrianSuccess = false, bismaSuccess = false, adrianChecked = false, bismaChecked = false;
             const ringPxX = START_X + 3 * SCALE_PX;
             const ringPxY = 30 + 3.05 * SCALE_PX;
             const ringRadius = 18;
@@ -1149,15 +1121,13 @@
                 const distA = Math.sqrt(Math.pow(parseFloat(ballA.style.left) - ringPxX, 2) + Math.pow(parseFloat(ballA.style.bottom) - ringPxY, 2));
                 const distB = Math.sqrt(Math.pow(parseFloat(ballB.style.left) - ringPxX, 2) + Math.pow(parseFloat(ballB.style.bottom) - ringPxY, 2));
                 if (distA < ringRadius && !adrianChecked && yA > 0) {
-                    adrianSuccess = true;
-                    adrianChecked = true;
+                    adrianSuccess = true; adrianChecked = true;
                     document.getElementById('adrianStatus').className = 'ring-success ring-indicator';
                     document.getElementById('adrianStatus').textContent = '✅ MASUK! 🎉';
                     ballA.className = 'projectile-ball masuk-ring';
                 }
                 if (distB < ringRadius && !bismaChecked && yB > 0) {
-                    bismaSuccess = true;
-                    bismaChecked = true;
+                    bismaSuccess = true; bismaChecked = true;
                     document.getElementById('bismaStatus').className = 'ring-success ring-indicator';
                     document.getElementById('bismaStatus').textContent = '✅ MASUK! 🎉';
                     ballB.className = 'projectile-ball masuk-ring';
@@ -1204,12 +1174,13 @@
             document.getElementById('basketDetailInfo').textContent = '💡 Klik "Mulai Lemparan" untuk animasi.';
         }
 
-        // ===== INERSIA (SOAL 8) =====
+        // ============================================================
+        // ANIMASI INERSIA (SOAL 8)
+        // ============================================================
         let inersiaInterval = null;
         let currentSpeed = 40;
         let currentAccel = 0;
-        const MIN_SPEED = 10,
-            MAX_SPEED = 120;
+        const MIN_SPEED = 10, MAX_SPEED = 120;
 
         document.addEventListener('DOMContentLoaded', function() {
             const slider = document.getElementById('accelSlider');
@@ -1309,8 +1280,7 @@
                 brakeEffect.className = 'inersia-brake-effect';
                 exhaustEffect.className = 'inersia-exhaust active';
                 accelEffect.className = 'inersia-accel-effect active';
-                detail.innerHTML =
-                '🚀 Mobil dipercepat! Penumpang terdorong ke <strong>belakang</strong> (efek inersia).<br><span style="color:#27ae60;">✓ Hukum I Newton</span>';
+                detail.innerHTML = '🚀 Mobil dipercepat! Penumpang terdorong ke <strong>belakang</strong> (efek inersia).<br><span style="color:#27ae60;">✓ Hukum I Newton</span>';
             } else if (accel < -1.0) {
                 const off = Math.min(12, Math.abs(accel) * 1.8);
                 const rot = 6;
@@ -1326,8 +1296,7 @@
                 brakeEffect.className = 'inersia-brake-effect active';
                 exhaustEffect.className = 'inersia-exhaust';
                 accelEffect.className = 'inersia-accel-effect';
-                detail.innerHTML =
-                '🛑 Mobil direm! Penumpang terdorong ke <strong>depan</strong> (efek inersia).<br><span style="color:#e74c3c;">✓ Hukum I Newton</span>';
+                detail.innerHTML = '🛑 Mobil direm! Penumpang terdorong ke <strong>depan</strong> (efek inersia).<br><span style="color:#e74c3c;">✓ Hukum I Newton</span>';
             } else {
                 sopir.style.transform = 'translateX(-50%)';
                 p1.style.transform = 'translateX(-50%)';
@@ -1376,8 +1345,7 @@
             document.getElementById('statusText').className = 'status-normal';
             document.getElementById('statusText').textContent = '🔵 Konstan';
             document.getElementById('accelText').textContent = '0.0 m/s²';
-            document.getElementById('inersiaDetail').innerHTML =
-                '🔄 Sistem direset. Geser slider atau klik tombol untuk mengatur percepatan.';
+            document.getElementById('inersiaDetail').innerHTML = '🔄 Sistem direset. Geser slider atau klik tombol untuk mengatur percepatan.';
         }
 
         function startInersiaLoop() {
@@ -1394,7 +1362,9 @@
             if (inersiaInterval) clearInterval(inersiaInterval);
         });
 
-        // ===== PERAHU (SOAL 9) =====
+        // ============================================================
+        // ANIMASI PERAHU (SOAL 9)
+        // ============================================================
         let isPlaying = false;
         let animProgress = 0;
         let boatInterval = null;
@@ -1420,9 +1390,7 @@
         const angleTextValue = document.getElementById('angleTextValue');
 
         function getPositionAtTime(t) {
-            let posX = 0,
-                posY = 0,
-                currentV1 = 0;
+            let posX = 0, posY = 0, currentV1 = 0;
             if (t <= 4.0) {
                 currentV1 = 2 * t;
                 posX = 0.5 * 2 * Math.pow(t, 2) * 12;
@@ -1456,9 +1424,7 @@
             const totalTime = 8.0;
             const t = factor * totalTime;
             const data = getPositionAtTime(t);
-            const posX = data.posX,
-                posY = data.posY,
-                currentV1 = data.currentV1;
+            const posX = data.posX, posY = data.posY, currentV1 = data.currentV1;
 
             if (t <= 4.0) {
                 phaseText.innerText = 'Arus Dipercepat (t ≤ 4s)';
@@ -1472,10 +1438,8 @@
 
             boatEl.style.transform = `translate(${posX}px, ${posY}px) rotate(0deg)`;
 
-            const startX = 70,
-                startY = 345;
-            const curX = startX + posX,
-                curY = startY + posY;
+            const startX = 70, startY = 345;
+            const curX = startX + posX, curY = startY + posY;
 
             const v1Len = currentV1 * 18;
             vecV1.setAttribute('x1', curX);
@@ -1521,9 +1485,7 @@
             const arcStartY = curY;
             const endArcX = curX + arcR * Math.cos(-angleRad);
             const endArcY = curY + arcR * Math.sin(-angleRad);
-            angleArc.setAttribute('d',
-                `M ${arcStartX} ${arcStartY} A ${arcR} ${arcR} 0 0 0 ${endArcX} ${endArcY} L ${curX} ${curY} Z`
-            );
+            angleArc.setAttribute('d', `M ${arcStartX} ${arcStartY} A ${arcR} ${arcR} 0 0 0 ${endArcX} ${endArcY} L ${curX} ${curY} Z`);
 
             updateTrajectoryString(t);
             perahuSlider.value = progress;
@@ -1566,7 +1528,9 @@
             playBtn.style.backgroundColor = '#4f46e5';
         }
 
-        // ===== KARATE (SOAL 10) =====
+        // ============================================================
+        // ANIMASI KARATE (SOAL 10)
+        // ============================================================
         let karateRunning = false;
 
         function lakukanPukulan() {
@@ -1624,14 +1588,11 @@
 
                 const explanation = document.getElementById('karateExplanation');
                 if (gaya > 5000) {
-                    explanation.innerHTML =
-                        `💥 <strong>Pukulan sangat kuat!</strong> Gaya <strong>${gaya.toFixed(0)} N</strong>! Waktu kontak ${waktuKontak.toFixed(3)} s → gaya besar. <span style="color:#e94560;font-weight:700;">✓ Sesuai konsep!</span>`;
+                    explanation.innerHTML = `💥 <strong>Pukulan sangat kuat!</strong> Gaya <strong>${gaya.toFixed(0)} N</strong>! Waktu kontak ${waktuKontak.toFixed(3)} s → gaya besar. <span style="color:#e94560;font-weight:700;">✓ Sesuai konsep!</span>`;
                 } else if (gaya > 2000) {
-                    explanation.innerHTML =
-                        `⚡ <strong>Pukulan cukup kuat!</strong> Gaya ${gaya.toFixed(0)} N. Semakin cepat pukulan, gaya semakin besar!`;
+                    explanation.innerHTML = `⚡ <strong>Pukulan cukup kuat!</strong> Gaya ${gaya.toFixed(0)} N. Semakin cepat pukulan, gaya semakin besar!`;
                 } else {
-                    explanation.innerHTML =
-                        `💪 <strong>Pukulan biasa.</strong> Gaya ${gaya.toFixed(0)} N. Coba tingkatkan kecepatan!`;
+                    explanation.innerHTML = `💪 <strong>Pukulan biasa.</strong> Gaya ${gaya.toFixed(0)} N. Coba tingkatkan kecepatan!`;
                 }
                 karateRunning = false;
                 btn.disabled = false;
@@ -1654,12 +1615,13 @@
             document.getElementById('impulsDisplay').innerText = '0.0 Ns';
             document.getElementById('gayaDisplay').innerText = '0.0 N';
             document.getElementById('momentumDisplay').innerText = '0.0 kg·m/s';
-            document.getElementById('karateExplanation').innerHTML =
-                '💡 <strong>Klik "PUKUL!"</strong> untuk simulasi. Semakin cepat pukulan, waktu kontak semakin singkat → <strong>gaya semakin besar</strong>!';
+            document.getElementById('karateExplanation').innerHTML = '💡 <strong>Klik "PUKUL!"</strong> untuk simulasi. Semakin cepat pukulan, waktu kontak semakin singkat → <strong>gaya semakin besar</strong>!';
             document.getElementById('btnPukul').disabled = false;
         }
 
-        // ===== INISIALISASI =====
+        // ============================================================
+        // INISIALISASI
+        // ============================================================
         document.addEventListener('DOMContentLoaded', function() {
             const ks = document.getElementById('kecepatanSlider');
             if (ks) {
@@ -1668,7 +1630,6 @@
                 });
             }
 
-            // Inisialisasi animasi
             updateRocketBySlider(0);
             updateGMBScene(6.0);
             updateBasketSimulation(6.5);
@@ -1677,7 +1638,6 @@
             resetKarate();
             updateProgress();
 
-            // Observer untuk navigasi
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1699,7 +1659,3 @@
 
 </body>
 </html>
-```
-
----
-
