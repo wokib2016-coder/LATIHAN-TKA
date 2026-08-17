@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🏆 TKA Fisika Interaktif - 10 Soal & Simulasi</title>
-    <meta name="description" content="Platform pembelajaran interaktif TKA Fisika SMA 2026 dengan 10 soal latihan, animasi, dan simulasi visual.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
     <style>
-        /* ===== CSS ===== */
+        /* ===== CSS LENGKAP ===== */
         *{box-sizing:border-box;margin:0;padding:0}
         :root{--primary:#1e3c72;--primary-light:#2a5298;--accent:#ff9800;--success:#27ae60;--danger:#e74c3c;--text:#333;--bg:#f4f7f6;--card-bg:#fff;--shadow:0 4px 10px rgba(0,0,0,0.1);--radius:12px}
         [data-theme=dark]{--primary:#0d1b2a;--primary-light:#1b3a5c;--text:#e8e8e8;--bg:#1a1a2e;--card-bg:#2d2d44}
@@ -36,12 +35,9 @@
         .attempts-text{font-size:.85rem;color:var(--text);opacity:.7}
         .reset-img-btn{background:var(--danger);color:#fff;border:none;padding:6px 16px;border-radius:6px;cursor:pointer;font-size:.8rem;font-weight:600;transition:.3s}
         .reset-img-btn:hover{transform:scale(1.05);opacity:.9}
-        .upload-section{border:2px dashed #3498db;border-radius:8px;padding:25px 15px;text-align:center;background:rgba(52,152,219,.05);cursor:pointer;transition:.3s;margin-bottom:15px;display:none}
-        .upload-section:hover{background:rgba(52,152,219,.1);border-color:#2980b9}
-        .upload-label{cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:6px;color:var(--text);font-weight:600}
-        .upload-label span{font-size:.9rem;opacity:.7}
-        .image-preview-container{text-align:center;margin-bottom:15px;display:block}
+        .image-preview-container{text-align:center;margin-bottom:15px}
         .image-preview-container img{max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:var(--shadow)}
+        .image-preview-container .no-image{background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999}
         .options-container{display:flex;flex-direction:column;gap:8px;margin-top:12px}
         .option-btn{background:var(--card-bg);border:2px solid #e0e0e0;padding:12px 16px;border-radius:8px;cursor:pointer;text-align:left;font-size:.95rem;transition:.3s;width:100%;color:var(--text);font-weight:500}
         .option-btn:hover:not(.correct):not(.incorrect){background:#e9ecef;border-color:#b0b0b0}
@@ -254,7 +250,9 @@
         <a href="#soal-10" data-q="10">10</a>
     </nav>
 
-    <!-- ===== SOAL 1 ===== -->
+    <!-- ============================================================
+    SOAL 1 - TAMPILAN GAMBAR LANGSUNG
+    ============================================================ -->
     <div class="card" id="soal-1">
         <div class="card-header-actions">
             <span class="card-number">📐 Soal 1 <span class="badge">Pengukuran</span></span>
@@ -263,17 +261,18 @@
                 <button class="reset-img-btn" onclick="resetQuestion(1)">↺ Reset</button>
             </div>
         </div>
-        <!-- GAMBAR LANGSUNG DARI REPOSITORY -->
-        <div class="image-preview-container" id="previewContainer-1" style="display:block;text-align:center;">
-            <img id="questionImage-1" src="soal1.jpg" alt="Soal 1" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 1</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-1" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,1)">
+        
+        <!-- TAMPILAN GAMBAR - Ganti src="soal1.jpg" dengan nama file gambar Anda -->
+        <div class="image-preview-container" id="previewContainer-1">
+            <img id="questionImage-1" src="soal1.jpg" alt="Gambar Soal 1" onerror="this.style.display='none'; document.getElementById('noImage-1').style.display='block';">
+            <div id="noImage-1" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal1.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal1.jpg</strong> ke repository</span>
         </div>
+
         <div class="options-container" id="options-1">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,1)">8,80 mm</button>
             <button class="option-btn" data-correct="true" onclick="handleOptionClick(this,1)">9,30 mm</button>
@@ -291,7 +290,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 2 ===== -->
+    <!-- ============================================================
+    SOAL 2
+    ============================================================ -->
     <div class="card" id="soal-2">
         <div class="card-header-actions">
             <span class="card-number">🧭 Soal 2 <span class="badge">Vektor</span></span>
@@ -300,15 +301,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(2)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-2" style="display:block;text-align:center;">
-            <img id="questionImage-2" src="soal2.jpg" alt="Soal 2" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 2</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-2" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,2)">
+        <div class="image-preview-container" id="previewContainer-2">
+            <img id="questionImage-2" src="soal2.jpg" alt="Gambar Soal 2" onerror="this.style.display='none'; document.getElementById('noImage-2').style.display='block';">
+            <div id="noImage-2" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal2.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal2.jpg</strong></span>
         </div>
         <div class="options-container" id="options-2">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,2)">Bergerak ke arah timur dengan kecepatan 12 km/jam</button>
@@ -326,7 +326,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 3 ===== -->
+    <!-- ============================================================
+    SOAL 3
+    ============================================================ -->
     <div class="card" id="soal-3">
         <div class="card-header-actions">
             <span class="card-number">📊 Soal 3 <span class="badge">Grafik GLBB</span></span>
@@ -335,15 +337,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(3)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-3" style="display:block;text-align:center;">
-            <img id="questionImage-3" src="soal3.jpg" alt="Soal 3" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 3</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-3" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,3)">
+        <div class="image-preview-container" id="previewContainer-3">
+            <img id="questionImage-3" src="soal3.jpg" alt="Gambar Soal 3" onerror="this.style.display='none'; document.getElementById('noImage-3').style.display='block';">
+            <div id="noImage-3" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal3.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal3.jpg</strong></span>
         </div>
         <div class="options-container" id="options-3">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,3)">Kecepatan mobil A dan kecepatan mobil B selalu konstan.</button>
@@ -362,7 +363,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 4 ===== -->
+    <!-- ============================================================
+    SOAL 4
+    ============================================================ -->
     <div class="card" id="soal-4">
         <div class="card-header-actions">
             <span class="card-number">📈 Soal 4 <span class="badge">Grafik V-t</span></span>
@@ -371,15 +374,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(4)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-4" style="display:block;text-align:center;">
-            <img id="questionImage-4" src="soal4.jpg" alt="Soal 4" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 4</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-4" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,4)">
+        <div class="image-preview-container" id="previewContainer-4">
+            <img id="questionImage-4" src="soal4.jpg" alt="Gambar Soal 4" onerror="this.style.display='none'; document.getElementById('noImage-4').style.display='block';">
+            <div id="noImage-4" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal4.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal4.jpg</strong></span>
         </div>
         <div class="options-container" id="options-4">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,4)">150 m</button>
@@ -397,7 +399,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 5 ===== -->
+    <!-- ============================================================
+    SOAL 5
+    ============================================================ -->
     <div class="card" id="soal-5">
         <div class="card-header-actions">
             <span class="card-number">🚀 Soal 5 <span class="badge">GLBB Vertikal</span></span>
@@ -406,15 +410,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(5)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-5" style="display:block;text-align:center;">
-            <img id="questionImage-5" src="soal5.jpg" alt="Soal 5" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 5</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-5" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,5)">
+        <div class="image-preview-container" id="previewContainer-5">
+            <img id="questionImage-5" src="soal5.jpg" alt="Gambar Soal 5" onerror="this.style.display='none'; document.getElementById('noImage-5').style.display='block';">
+            <div id="noImage-5" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal5.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal5.jpg</strong></span>
         </div>
         <div class="options-container" id="options-5">
             <button class="option-btn" data-correct="true" onclick="handleOptionClick(this,5)">30 m</button>
@@ -448,7 +451,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 6 ===== -->
+    <!-- ============================================================
+    SOAL 6
+    ============================================================ -->
     <div class="card" id="soal-6">
         <div class="card-header-actions">
             <span class="card-number">🔄 Soal 6 <span class="badge">GMB</span></span>
@@ -457,15 +462,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(6)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-6" style="display:block;text-align:center;">
-            <img id="questionImage-6" src="soal6.jpg" alt="Soal 6" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 6</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-6" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,6)">
+        <div class="image-preview-container" id="previewContainer-6">
+            <img id="questionImage-6" src="soal6.jpg" alt="Gambar Soal 6" onerror="this.style.display='none'; document.getElementById('noImage-6').style.display='block';">
+            <div id="noImage-6" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal6.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal6.jpg</strong></span>
         </div>
         <div class="options-container" id="options-6">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,6)">Kecepatan linear benda A menjadi dua kali kecepatan linear benda B.</button>
@@ -506,7 +510,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 7 ===== -->
+    <!-- ============================================================
+    SOAL 7
+    ============================================================ -->
     <div class="card" id="soal-7">
         <div class="card-header-actions">
             <span class="card-number">🏀 Soal 7 <span class="badge">Gerak Parabola</span></span>
@@ -515,15 +521,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(7)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-7" style="display:block;text-align:center;">
-            <img id="questionImage-7" src="soal7.jpg" alt="Soal 7" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 7</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-7" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,7)">
+        <div class="image-preview-container" id="previewContainer-7">
+            <img id="questionImage-7" src="soal7.jpg" alt="Gambar Soal 7" onerror="this.style.display='none'; document.getElementById('noImage-7').style.display='block';">
+            <div id="noImage-7" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal7.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal7.jpg</strong></span>
         </div>
         <div class="options-container" id="options-7">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,7)">Kedua bola tetap masuk ke ring karena sudut dan tinggi awalnya tidak berubah.</button>
@@ -572,7 +577,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 8 ===== -->
+    <!-- ============================================================
+    SOAL 8
+    ============================================================ -->
     <div class="card" id="soal-8">
         <div class="card-header-actions">
             <span class="card-number">🚗 Soal 8 <span class="badge">Hukum I Newton</span></span>
@@ -581,15 +588,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(8)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-8" style="display:block;text-align:center;">
-            <img id="questionImage-8" src="soal8.jpg" alt="Soal 8" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 8</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-8" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,8)">
+        <div class="image-preview-container" id="previewContainer-8">
+            <img id="questionImage-8" src="soal8.jpg" alt="Gambar Soal 8" onerror="this.style.display='none'; document.getElementById('noImage-8').style.display='block';">
+            <div id="noImage-8" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal8.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal8.jpg</strong></span>
         </div>
         <div class="options-container" id="options-8">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,8)">Semakin besar gaya yang diberikan pada suatu benda, semakin besar percepatannya.</button>
@@ -684,7 +690,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 9 ===== -->
+    <!-- ============================================================
+    SOAL 9
+    ============================================================ -->
     <div class="card" id="soal-9">
         <div class="card-header-actions">
             <span class="card-number">🚤 Soal 9 <span class="badge">Vektor + Hukum Newton</span></span>
@@ -693,15 +701,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(9)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-9" style="display:block;text-align:center;">
-            <img id="questionImage-9" src="soal9.jpg" alt="Soal 9" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 9</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-9" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,9)">
+        <div class="image-preview-container" id="previewContainer-9">
+            <img id="questionImage-9" src="soal9.jpg" alt="Gambar Soal 9" onerror="this.style.display='none'; document.getElementById('noImage-9').style.display='block';">
+            <div id="noImage-9" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal9.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal9.jpg</strong></span>
         </div>
         <div class="options-container" id="options-9">
             <button class="option-btn" data-correct="true" onclick="handleOptionClick(this,9)">kecepatan resultannya 10 m.s⁻¹ dengan arah 53° ke timur dari utara, kemudian bergerak lurus dengan kecepatan konstan</button>
@@ -762,7 +769,9 @@
         </div>
     </div>
 
-    <!-- ===== SOAL 10 ===== -->
+    <!-- ============================================================
+    SOAL 10
+    ============================================================ -->
     <div class="card" id="soal-10">
         <div class="card-header-actions">
             <span class="card-number">🥋 Soal 10 <span class="badge">Impuls-Momentum</span></span>
@@ -771,15 +780,14 @@
                 <button class="reset-img-btn" onclick="resetQuestion(10)">↺ Reset</button>
             </div>
         </div>
-        <div class="image-preview-container" id="previewContainer-10" style="display:block;text-align:center;">
-            <img id="questionImage-10" src="soal10.jpg" alt="Soal 10" style="max-width:100%;max-height:300px;border-radius:6px;border:1px solid #ddd;box-shadow:0 2px 6px rgba(0,0,0,0.1);">
-            <br><span style="font-size:0.8rem;color:#888;">📷 Gambar Soal 10</span>
-        </div>
-        <div class="upload-section" style="display:none;">
-            <div class="upload-label">
-                📤 Klik untuk Unggah Gambar Soal (JPEG)
-                <input type="file" id="fileInput-10" accept="image/jpeg" style="display:none;" onchange="loadQuestionImage(event,10)">
+        <div class="image-preview-container" id="previewContainer-10">
+            <img id="questionImage-10" src="soal10.jpg" alt="Gambar Soal 10" onerror="this.style.display='none'; document.getElementById('noImage-10').style.display='block';">
+            <div id="noImage-10" style="display:none;background:#f8f9fa;padding:30px;border-radius:6px;border:1px dashed #ccc;color:#999;">
+                ⚠️ Gambar tidak ditemukan.<br>
+                <span style="font-size:0.8rem;">Pastikan file <strong>soal10.jpg</strong> sudah di-upload ke repository.</span>
             </div>
+            <br>
+            <span style="font-size:0.8rem;color:#888;">📷 Upload gambar dengan nama <strong>soal10.jpg</strong></span>
         </div>
         <div class="options-container" id="options-10">
             <button class="option-btn" data-correct="false" onclick="handleOptionClick(this,10)">Impuls yang kecil menyebabkan tumpukan batu bata pecah karena kecepatan pukulan sangat tinggi.</button>
@@ -847,22 +855,9 @@
     </div>
 
     <script>
-        // ===== VARIABEL GLOBAL =====
+        // ===== SEMUA JAVASCRIPT =====
         let questionScores = { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0 };
         let questionLocked = { 1: false, 2: false, 3: false, 4: false, 5: false, 6: false, 7: false, 8: false, 9: false, 10: false };
-
-        function loadQuestionImage(event, qNum) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.getElementById('questionImage-' + qNum).src = e.target.result;
-                    document.getElementById('uploadSection-' + qNum).style.display = 'none';
-                    document.getElementById('previewContainer-' + qNum).style.display = 'block';
-                };
-                reader.readAsDataURL(file);
-            }
-        }
 
         function handleOptionClick(btn, qNum) {
             if (questionLocked[qNum]) {
@@ -1673,9 +1668,7 @@
                 });
             }
 
-            // Pastikan gambar ditampilkan dari repository
-            // (sudah diatur di HTML masing-masing soal)
-
+            // Inisialisasi animasi
             updateRocketBySlider(0);
             updateGMBScene(6.0);
             updateBasketSimulation(6.5);
@@ -1684,6 +1677,7 @@
             resetKarate();
             updateProgress();
 
+            // Observer untuk navigasi
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -1702,6 +1696,7 @@
             document.querySelectorAll('.card').forEach(card => observer.observe(card));
         });
     </script>
+
 </body>
 </html>
 ```
