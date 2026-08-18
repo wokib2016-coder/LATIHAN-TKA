@@ -7,7 +7,7 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
     <style>
         /* ============================================================
-           CSS LENGKAP (SAMA SEPERTI SEBELUMNYA)
+           CSS LENGKAP
            ============================================================ */
         *{box-sizing:border-box;margin:0;padding:0}
         :root{--primary:#1e3c72;--primary-light:#2a5298;--accent:#ff9800;--success:#27ae60;--danger:#e74c3c;--text:#333;--bg:#f4f7f6;--card-bg:#fff;--shadow:0 4px 10px rgba(0,0,0,0.1);--radius:12px}
@@ -52,7 +52,7 @@
         .options-container .checkbox-group label{flex:1;cursor:pointer;font-weight:500;font-size:.95rem;padding:4px 0}
         
         /* ============================================================
-           CSS LAINNYA (SAMA SEPERTI SEBELUMNYA)
+           CSS LAINNYA
            ============================================================ */
         .option-btn{background:var(--card-bg);border:2px solid #e0e0e0;padding:12px 16px;border-radius:8px;cursor:pointer;text-align:left;font-size:.95rem;transition:.3s;width:100%;color:var(--text);font-weight:500}
         .option-btn:hover:not(.correct):not(.incorrect){background:#e9ecef;border-color:#b0b0b0}
@@ -65,7 +65,7 @@
         .jawaban-benar-info{background:#d4edda;border:2px solid #28a745;border-radius:8px;padding:12px 16px;margin-bottom:12px;font-weight:700;color:#155724}
         
         /* ============================================================
-           SIMULASI - DI DALAM EXPLANATION BOX
+           SIMULASI
            ============================================================ */
         .sim-label{font-size:.9rem;font-weight:700;color:var(--accent);margin:12px 0 8px 0;display:flex;align-items:center;gap:8px;border-top:2px dashed var(--accent);padding-top:12px}
         .sim-label::before{content:"🎮";font-size:1.1rem}
@@ -275,7 +275,7 @@
     </nav>
 
     <!-- ============================================================
-    SOAL 1 - DIPERBAIKI (MCMA - CHECKBOX)
+    SOAL 1 - DIPERBAIKI (MCMA - CHECKBOX) DENGAN PEMBAHASAN & ANIMASI
     ============================================================ -->
     <div class="card" id="soal-1">
         <div class="card-header-actions">
@@ -316,6 +316,8 @@
                 <label for="cb1_5">10,30 mm</label>
             </div>
         </div>
+        
+        <!-- ACTION CONTAINER dengan tombol Lihat Pembahasan -->
         <div class="action-container" id="actionContainer-1">
             <button class="explain-btn" onclick="toggleExplanation(1)">📖 Lihat Pembahasan</button>
             <div class="explanation-box" id="explanationBox-1">
@@ -388,7 +390,6 @@
                 • Kecepatan kapal terhadap air = 10 - 2 = 8 km/jam ke timur<br>
                 • <strong>Jawaban: Bergerak ke arah timur dengan kecepatan 8 km/jam</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Kapal & Arus Laut</div>
                 <canvas id="sim2" class="sim-canvas"></canvas>
                 <div class="slider-container">
@@ -444,7 +445,6 @@
                 • Percepatan A = 5 m/s², Percepatan B = 2 m/s²<br>
                 • <strong>Jawaban: Pada detik ke-5, kecepatan kedua mobil sama</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Grafik V-t</div>
                 <canvas id="sim3" class="sim-canvas"></canvas>
                 <div class="slider-container">
@@ -499,7 +499,6 @@
                 • sA = ½ × 5 × 10² = 250 m<br>
                 • <strong>Jawaban: 250 m</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Mobil A & B Menyusul</div>
                 <canvas id="sim4" class="sim-canvas"></canvas>
                 <div class="slider-container">
@@ -553,7 +552,6 @@
                 • Δh = hB - hA = 105 - 75 = 30 m<br>
                 • <strong>Jawaban: 30 m</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Roket Vertikal</div>
                 <div class="anim-canvas-container">
                     <div class="ground"></div>
@@ -615,7 +613,6 @@
                 • Perbandingan vA : vB = 24 : 6 = <strong>4 : 1</strong><br>
                 • <strong>Kesimpulan: Kecepatan linear benda A menjadi empat kali kecepatan linear benda B</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Gerak Melingkar</div>
                 <div class="gmb-scene" id="gmbScene">
                     <div class="gmb-center-dot"></div>
@@ -680,7 +677,6 @@
                 • y_Bisma = 2 + 6,5×0,766×0,718 - 5×0,718² = 3,001 m (GAGAL, y < 3,05)<br>
                 • <strong>Jawaban: Bola Bisma jatuh lebih cepat dan gagal masuk karena kecepatannya lebih kecil</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Lemparan Basket</div>
                 <div class="basket-scene" id="basketScene">
                     <div class="basket-floor"></div>
@@ -751,7 +747,6 @@
                 • Penumpang mempertahankan gerak majunya saat mobil berhenti tiba-tiba<br>
                 • <strong>Jawaban: Sebuah buku akan tetap diam di atas meja sampai ada gaya yang menggerakkannya</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Inersia Mobil</div>
                 <div class="inersia-scene" id="inersiaScene">
                     <div class="inersia-bg-layer" id="bgLayer">
@@ -874,7 +869,6 @@
                 • Setelah gaya arus berhenti, perahu bergerak lurus dengan kecepatan konstan<br>
                 • <strong>Jawaban: kecepatan resultannya 10 m.s⁻¹ dengan arah 53° ke timur dari utara, kemudian bergerak lurus dengan kecepatan konstan</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Perahu & Arus Sungai</div>
                 <div class="perahu-scene" id="perahuScene">
                     <div class="river-current-east" id="riverBg"></div>
@@ -958,7 +952,6 @@
                 • Pukulan cepat → Δt sangat kecil → F sangat besar → hebel pecah<br>
                 • <strong>Jawaban: Gaya menjadi sangat besar karena perubahan momentum terjadi dalam waktu yang sangat singkat</strong>
                 
-                <!-- SIMULASI DI DALAM EXPLANATION BOX -->
                 <div class="sim-label">🎮 Simulasi Interaktif - Karate Memecah Hebel</div>
                 <div class="karate-scene" id="karateScene">
                     <div class="spotlight"></div>
@@ -1013,7 +1006,7 @@
     </div>
 
     <!-- ============================================================
-    JAVASCRIPT LENGKAP (DIPERBAIKI UNTUK SOAL 1 & 6)
+    JAVASCRIPT LENGKAP
     ============================================================ -->
     <script>
         // ============================================================
@@ -1033,20 +1026,18 @@
             }
             const checkbox = container.querySelector('input[type="checkbox"]');
             checkbox.checked = !checkbox.checked;
-            // Update visual
             if (checkbox.checked) {
                 container.classList.add('selected');
             } else {
                 container.classList.remove('selected');
             }
-            // Auto-check jawaban
             autoCheckMCMA(qNum);
         }
 
         function autoCheckMCMA(qNum) {
             const container = document.getElementById('options-' + qNum);
             const groups = container.querySelectorAll('.checkbox-group');
-            const correctValues = ['8.80', '9.30']; // nilai yang benar
+            const correctValues = ['8.80', '9.30'];
             const maxPoints = 1.0;
             
             let selectedValues = [];
@@ -1057,18 +1048,15 @@
                 }
             });
 
-            // Cek apakah semua jawaban benar
             let allCorrect = true;
             let allSelected = true;
             
-            // Cek: apakah semua nilai yang benar dipilih?
             for (let val of correctValues) {
                 if (!selectedValues.includes(val)) {
                     allCorrect = false;
                     break;
                 }
             }
-            // Cek: apakah ada nilai yang salah dipilih?
             for (let val of selectedValues) {
                 if (!correctValues.includes(val)) {
                     allSelected = false;
@@ -1076,7 +1064,6 @@
                 }
             }
 
-            // Tandai jawaban
             groups.forEach(g => {
                 const cb = g.querySelector('input[type="checkbox"]');
                 const val = cb.value;
@@ -1094,7 +1081,6 @@
                 }
             });
 
-            // Jika semua benar dan tidak ada yang salah
             if (allCorrect && allSelected && selectedValues.length === correctValues.length) {
                 questionScores[qNum] = maxPoints;
                 questionLocked[qNum] = true;
@@ -1102,13 +1088,10 @@
                 updateNavStatus(qNum);
                 updateTotalScore();
                 updateProgress();
-                // Reset counter
                 let resetCounter = document.getElementById('resetCount-' + qNum);
                 resetCounter.innerText = parseInt(resetCounter.innerText) + 1;
             } else if (selectedValues.length > 0) {
-                // Belum sempurna, tapi sudah ada yang dipilih
                 questionScores[qNum] = 0;
-                // Tidak mengunci
             }
         }
 
@@ -1129,7 +1112,6 @@
             const pointsPerCorrect = maxPoints / correctCount;
             const isCorrect = btn.dataset.correct === 'true';
             
-            // Reset semua tombol
             allBtns.forEach(b => {
                 b.classList.remove('correct', 'incorrect');
             });
@@ -1139,7 +1121,6 @@
                 questionScores[qNum] = maxPoints;
             } else {
                 btn.classList.add('incorrect');
-                // Tandai jawaban benar
                 allBtns.forEach(b => {
                     if (b.dataset.correct === 'true') {
                         b.classList.add('correct');
@@ -1190,7 +1171,6 @@
             const box = document.getElementById('explanationBox-' + qNum);
             const isHidden = box.style.display === 'none' || box.style.display === '';
             
-            // Sembunyikan semua explanation box lainnya
             for (let i = 1; i <= 10; i++) {
                 if (i !== qNum) {
                     document.getElementById('explanationBox-' + i).style.display = 'none';
@@ -1199,7 +1179,6 @@
             
             if (isHidden) {
                 box.style.display = 'block';
-                // Inisialisasi simulasi jika belum
                 if (!simActivated[qNum]) {
                     simActivated[qNum] = true;
                     setTimeout(() => {
@@ -1228,7 +1207,6 @@
             updateProgress();
             
             if (qNum === 1) {
-                // Reset checkbox
                 const container = document.getElementById('options-' + qNum);
                 const groups = container.querySelectorAll('.checkbox-group');
                 groups.forEach(g => {
@@ -1237,7 +1215,6 @@
                     g.classList.remove('correct', 'incorrect', 'selected');
                 });
             } else {
-                // Reset radio button
                 const container = document.getElementById('options-' + qNum);
                 container.querySelectorAll('.option-btn').forEach(b => {
                     b.classList.remove('correct', 'incorrect');
@@ -1250,7 +1227,6 @@
             if (resetCounter) resetCounter.innerText = '0';
             updateNavStatus(qNum);
             
-            // Reset animasi
             if (qNum === 5) resetRocketAnimation();
             else if (qNum === 6) resetGMBSimulation();
             else if (qNum === 7) resetBasketSimulation();
@@ -1283,7 +1259,7 @@
         }, 1000);
 
         // ============================================================
-        // 3. SIMULASI SOAL 1 (MCMA - CHECKBOX)
+        // 3. SIMULASI SOAL 1
         // ============================================================
         let beadSize = 9.3;
         let controlVal1 = 0;
@@ -1368,7 +1344,7 @@
         }
 
         // ============================================================
-        // 4. SIMULASI SOAL 2 (tetap)
+        // 4. SIMULASI SOAL 2
         // ============================================================
         let userBoatSpeed = 8;
         let controlVal2 = 0;
@@ -1444,7 +1420,7 @@
         }
 
         // ============================================================
-        // 5. SIMULASI SOAL 3 (tetap)
+        // 5. SIMULASI SOAL 3
         // ============================================================
         let durasiAnimasiGLBB = 0;
 
@@ -1564,7 +1540,7 @@
         }
 
         // ============================================================
-        // 6. SIMULASI SOAL 4 (tetap)
+        // 6. SIMULASI SOAL 4
         // ============================================================
         let timeSim4 = 10.0;
 
@@ -1656,7 +1632,7 @@
         }
 
         // ============================================================
-        // 7. ROKET (SOAL 5) - tetap
+        // 7. ROKET (SOAL 5)
         // ============================================================
         const SCALE_FACTOR = 1.4;
         let rocketInterval = null;
@@ -1694,7 +1670,7 @@
         }
 
         // ============================================================
-        // 8. GMB (SOAL 6) - DIPERBAIKI
+        // 8. GMB (SOAL 6)
         // ============================================================
         let thetaA = 0, thetaB = 0;
         const OMEGA_B_FIXED = 3.0;
@@ -1733,8 +1709,6 @@
             
             const vA = omegaA * 4;
             const vB = OMEGA_B_FIXED * 2;
-            const asA = Math.pow(omegaA, 2) * 4;
-            const asB = Math.pow(OMEGA_B_FIXED, 2) * 2;
             document.getElementById('gmbInfoBox').innerHTML = `vA: ${vA.toFixed(1)} m/s | vB: ${vB.toFixed(1)} m/s (vA = 4×vB)<br>ωA: ${omegaA.toFixed(1)} rad/s | ωB: ${OMEGA_B_FIXED.toFixed(1)} rad/s (tetap)`;
         }
 
@@ -1758,7 +1732,7 @@
         }
 
         // ============================================================
-        // 9. BASKET (SOAL 7) - tetap
+        // 9. BASKET (SOAL 7)
         // ============================================================
         const V0_ADRIAN = 7.5, ANGLE_DEG = 50, ANGLE_RAD = ANGLE_DEG * Math.PI / 180, G_BASKET = 9.8, SCALE_PX = 50;
         const START_X = 20, START_Y = 30 + 2 * SCALE_PX;
@@ -1876,7 +1850,7 @@
         }
 
         // ============================================================
-        // 10. INERSIA (SOAL 8) - tetap
+        // 10. INERSIA (SOAL 8)
         // ============================================================
         let inersiaInterval = null;
         let currentSpeed = 40;
@@ -2086,7 +2060,7 @@
         });
 
         // ============================================================
-        // 11. PERAHU (SOAL 9) - tetap
+        // 11. PERAHU (SOAL 9)
         // ============================================================
         let isPlaying = false;
         let animProgress = 0;
@@ -2252,7 +2226,7 @@
         }
 
         // ============================================================
-        // 12. KARATE (SOAL 10) - tetap
+        // 12. KARATE (SOAL 10)
         // ============================================================
         let karateRunning = false;
 
